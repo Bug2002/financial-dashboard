@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://financial-dashboard-backend.onrender.com/api/:path*"
+      "destination": "https://financial-dashboard-3lje.onrender.com/api/:path*"
     }
   ]
 }
