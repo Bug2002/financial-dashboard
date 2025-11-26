@@ -47,3 +47,11 @@ async def catch_exceptions_middleware(request: Request, call_next):
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
+
+@app.get("/")
+async def root():
+    return {
+        "message": "Financial Dashboard API is running",
+        "docs": "/docs",
+        "health": "/health"
+    }

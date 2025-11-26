@@ -422,7 +422,9 @@ export function ModernDashboard({ selectedAsset, priceData, news, prediction, pa
                                                                 items={activeTab === 'stocks' ? topStocks : topCrypto}
                                                                 onSelect={(symbol: any) => {
                                                                     const type = activeTab === 'stocks' ? 'Stock' : 'Crypto';
-                                                                    onSelectAsset({ symbol: symbol.symbol || symbol, name: symbol.name || symbol, type });
+                                                                    const symbolStr = typeof symbol === 'string' ? symbol : (symbol.symbol || symbol.name || "Unknown");
+                                                                    const nameStr = typeof symbol === 'string' ? symbol : (symbol.name || symbol.symbol || "Unknown");
+                                                                    onSelectAsset({ symbol: symbolStr, name: nameStr, type });
                                                                 }}
                                                             />
                                                         </div>
